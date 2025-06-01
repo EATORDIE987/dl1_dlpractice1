@@ -96,6 +96,12 @@ def evaluate_accuracy(net, data_iter):
             metric.add(accuracy(net(X), y), y.numel())
     return metric[0] / metric[1]
 
+# * ---------------------------------- 初始化模型参数 ----------------------------------
+def initnet(layer):
+    if type(layer)==nn.Linear:
+        layer.weight.data.normal_(0,0.01)
+        layer.bias.data.fill_(0)
+
 
 # * ---------------------------------- 下载并提取数据 ----------------------------------
 # todo 定义一个图像转换操作：将图像数据从 PIL (Python Imaging Library) 类型或者 NumPy 数组类型变换成 PyTorch 的张量 (Tensor) 类型，并且是 32 位浮点数格式。
@@ -139,37 +145,22 @@ batch_size = 256
 train_iter = data.DataLoader(mnist_train, batch_size, shuffle=True, num_workers=4)
 test_iter = data.DataLoader(mnist_test, batch_size, shuffle=False, num_workers=4)
 
-# * ---------------------------------- 初始化模型参数 ----------------------------------
-# todo 设置输入输出向量维度
-num_inputs = 784
-num_outputs = 10
-# ? 定义了一个展平层以把图片形式的矩阵data拉伸成向量参与后面的线性层
-net = nn.Sequential(nn.Flatten(), nn.Linear(784, 10))
-# todo 定义线性层参数初始值
-net[1].weight.data.normal_(0, 0.01)
-net[1].bias.data.fill_(0)
-# todo 定义交叉熵loss，对每条样本求交叉熵
-# ! 此处pytorch为确保交叉熵的数值稳定性采取了 LogSumExp 技巧
-loss = nn.CrossEntropyLoss(reduction="none")
-lr = 0.05
-num_epochs = 10
+# * ---------------------------------- 定义网络并初始化参数 ----------------------------------
+num_inputs=784;num_hidden=256;num_outputs=10
+net=nn.Sequential(nn.Flatten(),nn.Linear(784,256),nn.ReLU(),nn.Linear(256,10))
+net.apply(initnet)
+lr=0.2
+num_epoch=10
+trainer=torch.optim.SGD(net.parameters(),lr)
+loss=nn.CrossEntropyLoss(reduction='mean')
+scheduler=torch.optim.lr_scheduler.StepLR(trainer,step_size=5,gamma=0.2)
 
-# * ---------------------------------- 训练模型并评估测试集精确率 ----------------------------------
-trainer = torch.optim.SGD(net.parameters(), lr)
-# todo 学习率衰减策略
-# ? 示例：每4个epoch，lr变为原来的0.1倍
-scheduler = torch.optim.lr_scheduler.StepLR(trainer, step_size=4, gamma=0.2)
-for epoch in range(num_epochs):
-    # ! 及时切换到训练模式
-    net.train()
-    for x, y in train_iter:
-        l = loss(net(x), y)
-        # ! 反向传播前清零梯度
+# * ---------------------------------- 开始训练并输出测试集误差 ----------------------------------
+for epoch in range(num_epoch):
+    for x,y in train_iter:
+        l=loss(net(x),y)
         trainer.zero_grad()
-        l.sum().backward()
-        # ? 更新参数
+        l.backward()
         trainer.step()
-    # ! 每轮epoch结束更新学习率
     scheduler.step()
-    # todo 输出当前测试集预测精准率
-    print(f"epoch{epoch+1}:Accuracy:{evaluate_accuracy(net, test_iter)}", "\n")
+    print(f'epoch:{epoch+1}:  accurancy:{evaluate_accuracy(net,test_iter)}')
