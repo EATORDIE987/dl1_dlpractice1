@@ -1,0 +1,338 @@
+特征中文翻译：
+
+MSSubClass: 建筑类型 (房屋类型)
+
+20: 1层楼房 1946年及更新 (所有样式)
+30: 1层楼房 1945年及更老
+40: 1层楼房带已装修阁楼 (所有年代)
+45: 1层半楼房 - 未装修 (所有年代)
+50: 1层半楼房 - 已装修 (所有年代)
+60: 2层楼房 1946年及更新
+70: 2层楼房 1945年及更老
+75: 2层半楼房 (所有年代)
+80: 错层或多层
+85: 错层 foyer (门厅/玄关)
+90: 双拼别墅 (所有样式和年代)
+120: 1层楼 PUD (规划单元开发) - 1946年及更新
+150: 1层半 PUD - (所有年代)
+160: 2层楼 PUD - 1946年及更新
+180: PUD - 多层 - 包括错层/foyer
+190: 双户住宅改造 - (所有样式和年代)
+MSZoning: 区域规划分类 (售出物业的一般区域规划)
+
+A: 农业区
+C: 商业区
+FV: 浮动村庄住宅区 (Floating Village Residential)
+I: 工业区
+RH: 高密度住宅区
+RL: 低密度住宅区
+RP: 低密度住宅公园区
+RM: 中密度住宅区
+LotFrontage: 临街宽度 (与物业相连的街道的线性英尺数)
+
+LotArea: 地块面积 (平方英尺)
+
+Street: 街道类型 (通往物业的道路类型)
+
+Grvl: 碎石路
+Pave: 铺装路面
+Alley: 小巷类型 (通往物业的小巷类型)
+
+Grvl: 碎石
+Pave: 铺装
+NA: 没有小巷通道
+LotShape: 地块形状 (物业的总体形状)
+
+Reg: 规则
+IR1: 轻微不规则
+IR2: 中等不规则
+IR3: 不规则
+LandContour: 地形平整度
+
+Lvl: 近乎平坦/水平
+Bnk: 坡岸式 - 从街道平面到建筑有快速且显著的抬高
+HLS: 山坡式 - 从一侧到另一侧有显著坡度
+Low: 洼地/凹陷
+Utilities: 可用公共设施类型
+
+AllPub: 所有公共设施 (电、煤气、水、排污)
+NoSewr: 电、煤气、水 (使用化粪池)
+NoSeWa: 仅有电和煤气
+ELO: 仅有电
+LotConfig: 地块配置
+
+Inside: 内部地块
+Corner: 角落地块
+CulDSac: 袋形死巷地块
+FR2: 物业有两面临街
+FR3: 物业有三面临街
+LandSlope: 地块坡度
+
+Gtl: 平缓坡度
+Mod: 中等坡度
+Sev: 陡峭坡度
+Neighborhood: 地理位置 (艾姆斯市范围内的具体位置)
+
+(列出的是各个社区的缩写和全名，例如 Blmngtn: Bloomington Heights)
+Condition1: 临近条件1 (与各种设施的接近程度)
+
+Artery: 临近主干道
+Feedr: 临近次干道
+Norm: 正常
+RRNn: 距离南北向铁路200英尺以内
+RRAn: 临近南北向铁路
+PosN: 靠近积极的场外设施（公园、绿化带等）
+PosA: 临近积极的场外设施
+RRNe: 距离东西向铁路200英尺以内
+RRAe: 临近东西向铁路
+Condition2: 临近条件2 (如果存在多个临近条件)
+
+(类别同 Condition1)
+BldgType: 住宅类型
+
+1Fam: 独户独立住宅
+2FmCon: 双户改造住宅 (原为单户住宅)
+Duplx: 双拼住宅
+TwnhsE: 联排别墅端头户
+TwnhsI: 联排别墅中间户
+HouseStyle: 住宅风格
+
+1Story: 一层
+1.5Fin: 一层半，第二层已装修
+1.5Unf: 一层半，第二层未装修
+2Story: 两层
+2.5Fin: 两层半，第二层已装修
+2.5Unf: 两层半，第二层未装修
+SFoyer: 错层 Foyer (门厅/玄关)
+SLvl: 错层
+OverallQual: 整体材料和装修质量评分
+
+10: 非常优秀 ... 1: 非常差
+OverallCond: 整体状况评分
+
+10: 非常优秀 ... 1: 非常差
+YearBuilt: 建造年份 (原始建造日期)
+
+YearRemodAdd: 改造年份 (如果没有改造或增建，则与建造年份相同)
+
+RoofStyle: 屋顶类型
+
+Flat: 平顶
+Gable: 三角墙屋顶 (山墙)
+Gambrel: 复折式屋顶 (谷仓式)
+Hip: 四坡屋顶
+Mansard:孟莎式屋顶 (法式屋顶)
+Shed: 单坡屋顶
+RoofMatl: 屋顶材料
+
+ClyTile: 粘土或瓦片
+CompShg: 标准复合瓦
+Membran: 薄膜
+Metal: 金属
+Roll: 油毡卷材
+Tar&Grv: 沥青和砾石
+WdShake: 木制波纹瓦 (手劈木瓦)
+WdShngl: 木制屋面瓦
+Exterior1st: 房屋外墙覆盖材料1
+
+(列出各种材料，如 AsbShng: 石棉瓦, VinylSd: 乙烯基壁板等)
+Exterior2nd: 房屋外墙覆盖材料2 (如果使用多种材料)
+
+(类别同 Exterior1st)
+MasVnrType: 砌体饰面类型 (砖石贴面类型)
+
+BrkCmn: 普通砖
+BrkFace: 饰面砖
+CBlock: 煤渣砌块
+None: 无
+Stone: 石材
+MasVnrArea: 砌体饰面面积 (平方英尺)
+
+ExterQual: 外墙材料质量评估
+
+Ex: 优秀 ... Po: 差
+ExterCond: 外墙材料当前状况评估
+
+Ex: 优秀 ... Po: 差
+Foundation: 地基类型
+
+BrkTil: 砖和瓦
+CBlock: 煤渣砌块
+PConc: 现浇混凝土
+Slab: 平板式地基
+Stone: 石材
+Wood: 木材
+BsmtQual: 地下室高度评估
+
+Ex: 优秀 (100+ 英寸) ... Po: 差 (<70 英寸)
+NA: 没有地下室
+BsmtCond: 地下室总体状况评估
+
+Ex: 优秀 ... Po: 差 (严重开裂、沉降或潮湿)
+NA: 没有地下室
+BsmtExposure: 地下室采光墙或花园层墙体情况 (指地下室墙壁的暴露程度)
+
+Gd: 良好采光
+Av: 一般采光 (错层或门厅通常为一般或以上)
+Mn: 最低采光
+No: 无采光
+NA: 没有地下室
+BsmtFinType1: 地下室已装修区域评级1
+
+GLQ: 优质生活区 ... Unf: 未装修
+NA: 没有地下室
+BsmtFinSF1: 类型1已装修区域面积 (平方英尺)
+
+BsmtFinType2: 地下室已装修区域评级2 (如果存在多种装修类型)
+
+(类别同 BsmtFinType1)
+BsmtFinSF2: 类型2已装修区域面积 (平方英尺)
+
+BsmtUnfSF: 地下室未装修区域面积 (平方英尺)
+
+TotalBsmtSF: 地下室总面积 (平方英尺)
+
+Heating: 供暖类型
+
+Floor: 地板供暖炉
+GasA: 燃气强制暖风炉
+GasW: 燃气热水或蒸汽供暖
+Grav: 重力炉
+OthW: 非燃气的热水或蒸汽供暖
+Wall: 墙式暖炉
+HeatingQC: 供暖质量和状况
+
+Ex: 优秀 ... Po: 差
+CentralAir: 中央空调
+
+N: 无
+Y: 有
+Electrical: 电气系统
+
+SBrkr: 标准断路器和 Romex 电线
+FuseA: 超过60安培的保险丝盒和所有 Romex 电线 (一般)
+FuseF: 60安培保险丝盒和大部分 Romex 电线 (一般)
+FuseP: 60安培保险丝盒和大部分旋钮与管式布线 (差)
+Mix: 混合
+1stFlrSF: 一楼面积 (平方英尺)
+
+2ndFlrSF: 二楼面积 (平方英尺)
+
+LowQualFinSF: 低质量已装修面积 (所有楼层，平方英尺)
+
+GrLivArea: 地上居住面积 (平方英尺，不包括地下室)
+
+BsmtFullBath: 地下室全功能卫生间数量
+
+BsmtHalfBath: 地下室半功能卫生间数量 (通常只有马桶和洗手池)
+
+FullBath: 地上全功能卫生间数量
+
+HalfBath: 地上半功能卫生间数量
+
+Bedroom: 地上卧室数量 (不包括地下室卧室) (BedroomAbvGr)
+
+Kitchen: 地上厨房数量 (KitchenAbvGr)
+
+KitchenQual: 厨房质量
+
+Ex: 优秀 ... Po: 差
+TotRmsAbvGrd: 地上总房间数 (不包括卫生间)
+
+Functional: 房屋功能性 (除非有扣分项，否则假定为典型功能)
+
+Typ: 典型功能 ... Sal: 仅有残值
+Fireplaces: 壁炉数量
+
+FireplaceQu: 壁炉质量
+
+Ex: 优秀 ... Po: 差
+NA: 没有壁炉
+GarageType: 车库位置/类型
+
+2Types: 不止一种类型的车库
+Attchd: 与房屋相连
+Basment: 地下室车库
+BuiltIn: 内置车库 (车库是房屋一部分，通常车库上方有房间)
+CarPort: 车棚
+Detchd: 与房屋分离
+NA: 没有车库
+GarageYrBlt: 车库建造年份
+
+GarageFinish: 车库内部装修情况
+
+Fin: 已装修
+RFn: 粗装修
+Unf: 未装修
+NA: 没有车库
+GarageCars: 车库容量 (按车辆数计)
+
+GarageArea: 车库面积 (平方英尺)
+
+GarageQual: 车库质量
+
+Ex: 优秀 ... Po: 差
+NA: 没有车库
+GarageCond: 车库状况
+
+Ex: 优秀 ... Po: 差
+NA: 没有车库
+PavedDrive: 铺装车道
+
+Y: 已铺装
+P: 部分铺装
+N: 泥土/碎石
+WoodDeckSF: 木制露台面积 (平方英尺)
+
+OpenPorchSF: 开放式门廊面积 (平方英尺)
+
+EnclosedPorch: 封闭式门廊面积 (平方英尺)
+
+3SsnPorch: 三季门廊面积 (平方英尺)
+
+ScreenPorch: 纱窗门廊面积 (平方英尺)
+
+PoolArea: 游泳池面积 (平方英尺)
+
+PoolQC: 游泳池质量
+
+Ex: 优秀 ... Fa: 一般 (Fair)
+NA: 没有游泳池
+Fence: 栅栏质量
+
+GdPrv: 良好私密性 ... MnWw: 最低标准木制/金属丝
+NA: 没有栅栏
+MiscFeature: 其他杂项特征 (未在其他类别中涵盖)
+
+Elev: 电梯
+Gar2: 第二个车库 (如果车库部分未描述)
+Othr: 其他
+Shed: 小棚屋 (超过100平方英尺)
+TenC: 网球场
+NA: 无
+MiscVal: 杂项特征的价值 ($)
+
+MoSold: 销售月份 (MM)
+
+YrSold: 销售年份 (YYYY)
+
+SaleType: 销售类型
+
+WD: 保修契约 - 常规
+CWD: 保修契约 - 现金
+VWD: 保修契约 - VA贷款 (退伍军人事务部贷款)
+New: 刚刚建成并出售的新房
+COD: 法院官员契约/遗产
+Con: 合同交易，首付15%，常规条款
+ConLw: 合同交易，低首付和低利率
+ConLI: 合同交易，低利率
+ConLD: 合同交易，低首付
+Oth: 其他
+SaleCondition: 销售状况
+
+Normal: 正常销售
+Abnorml: 非正常销售 (如交易、止赎、短售)
+AdjLand: 购买邻近土地
+Alloca: 分配销售 (通常指两个独立产权但关联的物业，如公寓和车库单元)
+Family: 家庭成员之间的销售
+Partial: 上次评估时房屋未完工 (通常与新房相关)
