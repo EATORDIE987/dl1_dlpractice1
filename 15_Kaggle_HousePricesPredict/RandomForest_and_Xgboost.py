@@ -159,7 +159,7 @@ pd.Series(Pre_RF).to_excel('Pre_RF.xlsx')
 
 # * ----------------------------------------- Xgboost训练环节 ---------------------------------------------
 cv_splitter = KFold(n_splits=5, shuffle=True, random_state=40)
-scoring_metric = "neg_mean_absolute_error"
+scoring_metric = 'neg_root_mean_squared_error'
 '''
 # todo 定义基础xgboost模型
 base_model = xgb.XGBRegressor(
@@ -212,6 +212,7 @@ scores=cross_val_score(
     cv=cv_splitter,
     n_jobs=-1,
 )
+
 # todo 输出结果信息
 print('网格搜索超参数调优后，Xgboost算法5折交叉验证在训练集上的表现：')
 print(f"交叉验证评估指标: {scoring_metric}")
